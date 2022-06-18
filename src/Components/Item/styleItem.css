@@ -1,0 +1,43 @@
+
+    
+
+.item{
+    width: 350px;
+    height: fit-content;
+    
+    display: inline-block;
+    margin-top: 20px;
+    
+}
+
+.item p{
+  margin-bottom: 10px;  
+}
+.item img{
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    transition: transform .2s;
+    
+}
+
+.item img:hover{
+   transform: scale(1.03);
+   z-index: 1;
+}
+
+
+
+#p-title{
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.star{
+    color: rgb(255, 192, 206);
+}
+
+.item:hover  .star{
+    color: rgb(196, 26, 145);
+   
+}

@@ -1,0 +1,11 @@
+.searcher{
+    margin-bottom: 30px;
+}
+
+.searcher-container{/*cdo el navbar es de react sin las class poner esto*/
+    margin-top: 100px;
+}
+
+#search{
+    font-weight: 600;
+}

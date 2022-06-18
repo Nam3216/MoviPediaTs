@@ -1,0 +1,16 @@
+
+
+@media screen and (min-width: 1000px) {
+
+    .item-review {
+        padding: 30px;
+        text-align: left;
+        width: 80%;
+        margin: 0px auto;
+    }
+    
+    .item-review p{
+        padding: 10px;
+    }
+
+}
