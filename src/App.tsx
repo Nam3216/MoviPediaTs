@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
@@ -17,6 +17,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
+
+  useEffect(()=>{
+    document.title="Movie-Pedia"
+  },[])
   return (
     <div className="App">
       <ContextContainer>
@@ -28,7 +32,7 @@ function App() {
 
       <main>
         <Routes>
-
+          <Route path={'/MoviPediaTs'} element={<Home/>}/>
           <Route path={'/'} element={<Home/>}/>
           <Route path={'/sorpresa'} element={<Surprise/>}/>
           <Route path={'/categorias/categoria/:genre_id'} element={<Category/>}/>

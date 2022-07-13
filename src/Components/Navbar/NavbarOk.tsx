@@ -33,9 +33,9 @@ const NavbarOk=()=>{
 
     return(
         <div  >
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" className={check ? "navbar-ok" : "navbar-sticky-ok"}>
                 <Container>
-                <Navbar.Brand href="#home"><img src="moviepedia1.png"style={{width:80}} /></Navbar.Brand>
+                <Navbar.Brand href="#home">Movie-Pedia</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -74,26 +74,4 @@ const NavbarOk=()=>{
 
 export default NavbarOk
 
-//id="collasible-nav-dropdown"
-/* <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>*/
 
-                    /*<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>*/
-                        /* <Nav.Link href="#deets">More deets</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">*/
-/* <div className={check ? "navbarNormal" : "navbar-sticky"} >
-                <ul>
-                    <li><Link to={"/"}>Inicio</Link></li>
-                    <li><Link to={"/novedades"}>Novedades</Link></li>
-                    <li><Link to={"/sorpresa"}>Sorpresa</Link></li>
-                    <li><Link to={"/categorias"}>Categorias</Link></li>
-                    <li><Link to={"/categorias/categoria/28"}>Accion</Link></li>
-                    <li><Link to={"/categorias/categoria/9648"}>Misterio</Link></li>
-                    <li><Link to={"/reviews"}>Reviews</Link></li>
-                    <li><Link to={"/busqueda"}>Busqueda</Link></li>
-                </ul>
-            </div>*/
