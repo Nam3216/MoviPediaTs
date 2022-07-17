@@ -3,8 +3,8 @@
     text-align: center;
    /* margin: 0px auto;*/
    position: sticky;
-    top: 4%;/*top hace q qede ok sticky*/
-    z-index: 101;
+    top: 8%;/*top hace q qede ok sticky*/
+    z-index: 100;
     background-color: white;
     margin-top: 10px;
     
@@ -12,30 +12,38 @@
 
 
 .img-header-container {
-    width: 300px;
+    display: none;
+    width: 150px;
     height: 150px;
     margin: 0px auto;
     
-    object-fit: cover;
+    object-fit: contain;
     margin-top: 10px;
 }
 
 .home-header{
     margin: 0 auto;
+    
+  
+
 }
 
 .home-header-text {
     margin: 0px auto;
+    margin-top: 80px;
+    background-image: url("pink.gif");
+   
   
         
 }
 
 .home-header-text p {
-    font-weight: 600;
+    font-size: small;
 }
 
 .home-header-text h3 {
-    font-weight: 600;
+   font-size: small;
+   font-weight: 600;
 }
 
 
@@ -45,8 +53,14 @@
     width: 250px;
     margin-top: 10px;
 }
-@media screen and (min-width: 1000px) {
 
+#overview{
+    display: none;
+}
+@media screen and (min-width: 1000px) {
+    #overview{
+        display: grid;
+    }
     
     .home-header{
         display: flex;
@@ -82,8 +96,15 @@
     
     .home-header-text h3{
         margin-top: 10%;
+        font-weight: 600;
+        font-size: large;
+    }
+    .home-header-text p {
+        font-weight: 600;
+        font-size: small;
     }
     .img-header-container{
+        display: grid;
         text-align: center;
         margin: 0 auto;
         box-shadow: 60px 10px 50px 70px white inset;

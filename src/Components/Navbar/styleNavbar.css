@@ -1,20 +1,9 @@
 .navbar-ok{
     height: 60px;
     background-color: black;
-    z-index: 101;
+    z-index: 120;
 }
     
-      /* .navbarNormal {
-   
-        display: flex;
-        justify-content: space-evenly;
-       
-        
-        align-items: flex-end;
-        height: 60px;
-        
-    }*/
-
  
 
     a{
@@ -30,13 +19,23 @@
     .navbar-sticky-ok{
         /*position: fixed;*/
       /*  height: 40px;*/
-        background-color: black;
-        z-index: 101;
+      background-color: black;
+        z-index: 110;
         width: 100%;
              
         
     }
 
+ #menu-desplegable{
+    background-color: black;
+ }
+
+ .links{
+    background-color: black;
+ }
+ .me-auto{
+    background-color: black;
+ }
 
     @media screen and (min-width: 1000px) {
 
