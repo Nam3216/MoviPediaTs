@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/MoviPediaTs/static/css/main.cea56cb4.css",
-    "main.js": "/MoviPediaTs/static/js/main.883e0241.js",
+    "main.css": "/MoviPediaTs/static/css/main.b504318c.css",
+    "main.js": "/MoviPediaTs/static/js/main.f43f837b.js",
     "static/js/787.8937b56f.chunk.js": "/MoviPediaTs/static/js/787.8937b56f.chunk.js",
     "static/media/pink2.png": "/MoviPediaTs/static/media/pink2.36342921f26c0c6e8e0c.png",
-    "static/media/pink.gif": "/MoviPediaTs/static/media/pink.2b0ab5ad9424fce49e50.gif",
     "index.html": "/MoviPediaTs/index.html",
-    "main.cea56cb4.css.map": "/MoviPediaTs/static/css/main.cea56cb4.css.map",
-    "main.883e0241.js.map": "/MoviPediaTs/static/js/main.883e0241.js.map",
+    "main.b504318c.css.map": "/MoviPediaTs/static/css/main.b504318c.css.map",
+    "main.f43f837b.js.map": "/MoviPediaTs/static/js/main.f43f837b.js.map",
     "787.8937b56f.chunk.js.map": "/MoviPediaTs/static/js/787.8937b56f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cea56cb4.css",
-    "static/js/main.883e0241.js"
+    "static/css/main.b504318c.css",
+    "static/js/main.f43f837b.js"
   ]
 }
