@@ -2,17 +2,25 @@
    
     text-align: center;
    /* margin: 0px auto;*/
-   position: sticky;
-    top: 8%;/*top hace q qede ok sticky*/
+   position: fixed;
+  /* top: 6%;/*top hace q qede ok sticky*/
     z-index: 100;
-    background-color: white;
-    margin-top: 10px;
+   background-color: white;
+    /*margin-top: 20px;*/
+    margin: auto;
+    width: 100%;
+    background-image: url("movie.jpg");
+   
+   
+   
     
 }
 
 
+
 .img-header-container {
-    display: none;
+   display: none;
+  
     width: 150px;
     height: 150px;
     margin: 0px auto;
@@ -31,14 +39,18 @@
 .home-header-text {
     margin: 0px auto;
     margin-top: 80px;
-    background-image: url("pink.gif");
+    
+   text-align: center;
    
   
         
 }
 
+
 .home-header-text p {
     font-size: small;
+
+    
 }
 
 .home-header-text h3 {
@@ -58,9 +70,10 @@
     display: none;
 }
 @media screen and (min-width: 1000px) {
-    #overview{
-        display: grid;
-    }
+    
+   .header-button{
+    margin-top: 30px;
+   }
     
     .home-header{
         display: flex;
@@ -69,6 +82,8 @@
        position: sticky;
         top: 4%;/*top hace q qede ok sticky*/
         z-index: 101;
+       /* height: 350px;*/
+       background-image: none;
       
         
     }
@@ -89,9 +104,11 @@
     }
 
   #overview{
-    width: 700px;
+    display: block;
+    width: 400px;
+    height: 150px;
     text-align: center;
-    margin-left: 150px;
+    margin: auto;
   }
     
     .home-header-text h3{

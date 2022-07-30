@@ -18,9 +18,10 @@ const HomeHeader=()=>{
                 <p>{genre} </p>
                 <p>Rating: {vote} </p>
                 <p id="overview">{overviewOk}</p>
+                <div className="header-button">
                 <Button variant="primary" className="button-header" onClick={()=>GetVideos(idOk)}>Play</Button>
                <Link to={`/detail/${idOk}`}> <Button variant="primary" className="button-header" onClick={()=>GetObject(fullObject)}>Ver detalles</Button></Link>
-
+               </div>
             </div>
             <div className="img-header-container" style={{backgroundImage:`url(${imageOk})` ,
 

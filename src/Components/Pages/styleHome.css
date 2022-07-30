@@ -1,6 +1,17 @@
 .home-container{
     text-align: center;
+   
   
 
 }
 
+.item-container{
+    margin-top: 250px;
+}
+
+@media screen and (min-width: 1000px) {
+    .item-container{
+        margin-top: 0;
+    }
+    
+}

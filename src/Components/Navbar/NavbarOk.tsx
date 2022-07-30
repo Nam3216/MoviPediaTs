@@ -35,13 +35,13 @@ const NavbarOk=()=>{
         <div  >
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" className={check ? "navbar-ok" : "navbar-sticky-ok"}>
                 <Container>
-                <Navbar.Brand href="#home">Movie-Pedia</Navbar.Brand>
+                <Navbar.Brand href="/">Movie-Pedia</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                    <Nav.Link href="#features"><Link to={"/"} className="links">Inicio</Link></Nav.Link>
-                    <Nav.Link href="#pricing"><Link to={"/novedades"}className="links">Novedades</Link></Nav.Link>
-                    <Nav.Link href="#pricing"><Link to={"/sorpresa"}className="links">Sorpresa</Link></Nav.Link>
+                    <Nav.Link ><Link to={"/"} className="links">Inicio</Link></Nav.Link>
+                    <Nav.Link ><Link to={"/novedades"}className="links">Novedades</Link></Nav.Link>
+                    <Nav.Link ><Link to={"/sorpresa"}className="links">Sorpresa</Link></Nav.Link>
                    
                     <NavDropdown title="Categorias" id="menu-desplegable" className="links"  >
                     <NavDropdown.Item href="#action/3.2"><Link to={"/categorias/categoria/28"}>Accion</Link></NavDropdown.Item>
@@ -56,11 +56,10 @@ const NavbarOk=()=>{
                        
                     </NavDropdown>
                    
-                    <Nav.Link href="#pricing"><Link to={"/busqueda"}className="links">Busqueda</Link></Nav.Link>
+                    <Nav.Link ><Link to={"/busqueda"}className="links">Busqueda</Link></Nav.Link>
                     </Nav>
                     <Nav>
-                    <div>HOla</div>
-                    <div>HOla</div>
+                    
                    
                     </Nav>
                 </Navbar.Collapse>
