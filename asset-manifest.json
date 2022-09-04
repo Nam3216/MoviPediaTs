@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MoviPediaTs/static/css/main.9775a616.css",
-    "main.js": "/MoviPediaTs/static/js/main.1675ba88.js",
+    "main.css": "/MoviPediaTs/static/css/main.eb2ad659.css",
+    "main.js": "/MoviPediaTs/static/js/main.c2541e7e.js",
     "static/js/787.8937b56f.chunk.js": "/MoviPediaTs/static/js/787.8937b56f.chunk.js",
     "static/media/pink2.png": "/MoviPediaTs/static/media/pink2.36342921f26c0c6e8e0c.png",
     "index.html": "/MoviPediaTs/index.html",
-    "main.9775a616.css.map": "/MoviPediaTs/static/css/main.9775a616.css.map",
-    "main.1675ba88.js.map": "/MoviPediaTs/static/js/main.1675ba88.js.map",
+    "main.eb2ad659.css.map": "/MoviPediaTs/static/css/main.eb2ad659.css.map",
+    "main.c2541e7e.js.map": "/MoviPediaTs/static/js/main.c2541e7e.js.map",
     "787.8937b56f.chunk.js.map": "/MoviPediaTs/static/js/787.8937b56f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9775a616.css",
-    "static/js/main.1675ba88.js"
+    "static/css/main.eb2ad659.css",
+    "static/js/main.c2541e7e.js"
   ]
 }
