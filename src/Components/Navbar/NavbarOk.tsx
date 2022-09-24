@@ -33,7 +33,7 @@ const NavbarOk=()=>{
 
     return(
         <div  >
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" className={check ? "navbar-ok" : "navbar-sticky-ok"}>
+            <Navbar collapseOnSelect expand="lg" bg="black" variant="dark" fixed="top" className={check ? "navbar-ok" : "navbar-sticky-ok"} >
                 <Container>
                 <Navbar.Brand href="/">Movie-Pedia</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -44,15 +44,15 @@ const NavbarOk=()=>{
                     <Nav.Link ><Link to={"/sorpresa"}className="links">Sorpresa</Link></Nav.Link>
                    
                     <NavDropdown title="Categorias" id="menu-desplegable" className="links"  >
-                    <NavDropdown.Item href="#action/3.2"><Link to={"/categorias/categoria/28"}>Accion</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/9648"}>Misterio</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/35"}>Comedia</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/14"}>Fantasia</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/18"}>Drama</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/27"}>Horror</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/10749"}>Romance</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/53"}>Thriller</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3"><Link to={"/categorias/categoria/878"}>Ciencia Ficcion</Link></NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2" id="menuok"><Link to={"/categorias/categoria/28"}><p>Accion</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/9648"}><p>Misterio</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/35"}><p>Comedia</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/14"}><p>Fantasia</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/18"}><p>Drama</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/27"}><p>Horror</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/10749"}><p>Romance</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/53"}><p>Thriller</p></Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3" id="menuok"><Link to={"/categorias/categoria/878"}><p>Ciencia Ficcion</p></Link></NavDropdown.Item>
                        
                     </NavDropdown>
                    

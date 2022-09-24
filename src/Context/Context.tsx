@@ -68,7 +68,7 @@ const ContextContainer=({children}:ChildInt )=>{
     //es para pasar al headerhome o a detail, el objeto cdo hacen click en la imagen de pelicula en el home o categora u otra lista, puede ser asi o le puedo pasar el objeto entero
     const GetObject=(dataOk:any)=>{
         console.log(dataOk, "dataok")
-        setImageOk(`https://image.tmdb.org/t/p/w500${dataOk.poster_path}`)
+        setImageOk(`https://image.tmdb.org/t/p/w500${dataOk.poster_path}`)//`https://image.tmdb.org/t/p/w300${dataOk.poster_path}`
         setTitleOk(dataOk.original_title)
         setOverviewOk(dataOk.overview)
         setVote(dataOk.vote_average)

@@ -1,11 +1,13 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
 }
 
 li {
@@ -17,10 +19,13 @@ main{/*.container*/
   display: flex;
   flex-direction: column;
   margin: 0px auto;
+  
 }
+
 
 main{
   text-align: center;
+
 }
 
 a:link, a:visited, a:active {
@@ -29,10 +34,12 @@ a:link, a:visited, a:active {
 
 @media screen and (min-width: 1000px) {
 
-  .container{
+  .content{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 80px 1fr 1fr 80px;
+    background-color: black;
+   /* min-height: 950px;*/
   }
 
   header{
@@ -43,12 +50,16 @@ a:link, a:visited, a:active {
   main{
     grid-column: 1/5 ;
     grid-row: 2/4;
+    min-height: 750px;
+    
     
   }
 
-  footer{
+  .footer{
     grid-column: 1/5;
     grid-row: 4/5;
+    
+    
   }
 
   }

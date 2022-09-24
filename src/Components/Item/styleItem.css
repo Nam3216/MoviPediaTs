@@ -1,5 +1,7 @@
 
-    
+ .itm{
+    display: inline-block;
+ }   
 
 .item{
     width: 350px;
@@ -7,6 +9,7 @@
     
     display: inline-block;
     margin-top: 20px;
+    color: white;
     
 }
 
@@ -14,8 +17,8 @@
   margin-bottom: 10px;  
 }
 .item img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     transition: transform .2s;
     
@@ -44,7 +47,7 @@
 @media screen and (min-width: 1000px) {
     .item img{
         width: 350px;
-        height: 350px;
+        height: 250px;
         
     }
 

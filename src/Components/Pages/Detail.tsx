@@ -22,7 +22,7 @@ const Detail=()=>{
         <img src={imageOk} alt="cargando" id="image-detail" />
         <div className="item-detail-text">
             <h3>{titleOk}</h3>
-            <h4>{overviewOk}</h4>
+            <p>{overviewOk}</p>
             <p>{genre} </p>
             <p>Rating: {vote}</p>
             <p>Fecha de Estreno: {date}</p>

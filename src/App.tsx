@@ -12,6 +12,7 @@ import Review from './Components/Pages/Review';
 import NewMovie from './Components/Pages/New';
 import Surprise from './Components/Pages/Suprise';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from './Components/Pages/Footer';
 //import 'bootstrap/dist/css/bootstrap'
 //import Navbar2 from "./Components/Navbar/Navbar2"
 
@@ -48,6 +49,7 @@ function App() {
         </Routes>
       </main>
 
+    <Footer/>
 
       </BrowserRouter>
       </div>

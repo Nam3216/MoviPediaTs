@@ -83,24 +83,24 @@ const Item=({dataOk,msg}:DataType)=>{
       
 
     return(
-       <div className="item" key={id} >
+       <div className="itm" key={id} >
         
            
             {msg=="home"? (
-            <div> 
+            <div className="item"> 
                 <img onClick={()=> GetObject(dataOk)} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="cargando"/>
                 <p id="p-title">{original_title} </p>
-                <div>{genreItem}/{genreItem2} </div>
-                <div>Rating: {vote_average}  {vote_average<3  && <div><StarIcon/></div>}
+                <p>{genreItem}/{genreItem2} </p>
+                <div> Rating: {vote_average}{vote_average<3  && <div><StarIcon/></div>}
                 {vote_average<5 && vote_average >3 && <div><StarIcon fontSize="medium" className="star" /><StarIcon className="star"/></div>}
-                {vote_average>5 && vote_average <8 && <div><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/></div>}
-                {vote_average>8 && vote_average <9 && <div><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/></div>}
-                {vote_average>9 && <div><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/></div>} </div>
+                {vote_average>=5 && vote_average <8 && <div><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/></div>}
+                {vote_average>=8 && vote_average <9 && <div><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/></div>}
+                {vote_average>=9 && <div><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/><StarIcon fontSize="medium"className="star"/></div>} </div>
                
                 
                
             </div>):(
-                <div> 
+                <div className="item"> 
                   <Link to={`/detail/${id}`} > <img  onClick={()=> GetObject(dataOk)} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="cargando"/></Link>
                     <p id="p-title">{original_title} </p>
                     <div>{genreItem}/{genreItem2}</div>

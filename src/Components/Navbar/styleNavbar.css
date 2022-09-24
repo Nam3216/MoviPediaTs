@@ -2,9 +2,17 @@
     height: 60px;
     background-color: black;
     z-index: 120;
+    border-bottom: 1px solid blue;
 }
     
- 
+ #menuok{
+    background-color: white;
+    
+ }
+
+ #menuok p{
+    background-color: white;
+ }
 
     a{
         font-weight: 600;
@@ -22,6 +30,7 @@
       background-color: black;
         z-index: 110;
         width: 100%;
+        border-bottom: 1px solid blue;
              
         
     }
@@ -34,8 +43,9 @@
     background-color: black;
  }
  .me-auto{
-    background-color: black;
+    background-color: rgb(37, 37, 37);
  }
+ /*rgb(37, 37, 37)*/
 
     @media screen and (min-width: 1000px) {
 
@@ -81,10 +91,11 @@
         
             .navbar-sticky-ok{
                 position: fixed;
-                height: 40px;
+                height: 50px;
                 background-color: black;
                 z-index: 101;
                 width: 100%;
+                border-bottom: 1px solid blue;
                      
                 
             }
