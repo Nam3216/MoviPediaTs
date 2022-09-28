@@ -5,6 +5,7 @@ import { ApisVideos } from "../Components/Interface/InterfaceVideos"
 import {useNavigate} from "react-router-dom"
 import { createContext } from "react"
 import { ApisReview } from "../Components/Interface/InterfaceReview"
+import { Simulate } from "react-dom/test-utils"
 
 
 /*interface ContextInt{ TAMBIEN PUEDE USARSE INTERFACE PARA TIPAR CONTEXT
@@ -26,7 +27,7 @@ const ContextType={
     date:" ",
     genre:" ",
     backImage:" ",
-    GetVideos:(id:any)=>{//asi tipo una fincion. funcionnombre:(argumentos si tiene, si no vacio los parentesis)=>lo que devuelve
+    GetVideos:(id:any, msg:any)=>{//asi tipo una fincion. funcionnombre:(argumentos si tiene, si no vacio los parentesis)=>lo que devuelve
         return id
     },
     
@@ -40,7 +41,7 @@ const ContextType={
     },
     review:[{content:" ",author:" "}],//asi tipo un array de objetos que agarra info de la api
     fullObject:{},//para guardar objecto completo en GetObject por si alguno necesita
-  
+    videoOk:" ",
     
 }
 //2 le doy un tipo al arg de create context o creo una interface y se la paso asi createContext<IThemeContext>({})
@@ -63,12 +64,13 @@ const ContextContainer=({children}:ChildInt )=>{
     const[genreNumber,setGenreNumber]=useState(0)
     const[review,setReview]=useState<ApisReview[]>([])//esto va a guardar el array de objetos que devulve funcion getreview
     const[fullObject,setFullObject]=useState({})
+   const[videoOk,setVideoOk]=useState(" ")
    
     //--------------------1--------------------------------------------------
     //es para pasar al headerhome o a detail, el objeto cdo hacen click en la imagen de pelicula en el home o categora u otra lista, puede ser asi o le puedo pasar el objeto entero
     const GetObject=(dataOk:any)=>{
         console.log(dataOk, "dataok")
-        setImageOk(`https://image.tmdb.org/t/p/w500${dataOk.poster_path}`)//`https://image.tmdb.org/t/p/w300${dataOk.poster_path}`
+        setImageOk(`https://image.tmdb.org/t/p/w500${dataOk.poster_path}`)//`https://image.tmdb.org/t/p/w300${dataOk.poster_path}` `https://image.tmdb.org/t/p/original${dataOk.poster_path}`
         setTitleOk(dataOk.original_title)
         setOverviewOk(dataOk.overview)
         setVote(dataOk.vote_average)
@@ -78,6 +80,7 @@ const ContextContainer=({children}:ChildInt )=>{
         setGenreNumber(dataOk.genre_ids[0])
         GetGenre(dataOk.genre_ids[0])//llamo funcion q busqe el genre en numero y lo pase al state en text
         setFullObject(dataOk)//guardo objeto completo que recibe por si alguno necesita
+        
     }
         
      
@@ -114,12 +117,17 @@ const ContextContainer=({children}:ChildInt )=>{
       console.log(genre,"genre text")
 //-------------------------------------2---------------------------------------------------
 //es para obtener videos cdo apretan play, obtiene de esa direccion y la lista de videos. devuelve una lista con un key, ahi se activa playvideo
-    const GetVideos=async(id:any)=>{
+    const GetVideos=async(id:any, msg:any)=>{//sacarle msg
         try{
             const response=await axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=42fea80bd124c21e385adf6985bb6c61&language=en-US`)
             const responseData=response.data.results as Array<ApisVideos>
             setVideo(responseData)
-            PlayVideo(responseData)
+            if(msg=="detail"){//si se hace click desde detail q se abra el play video, en youtub
+                PlayVideo(responseData)
+            }
+            if(msg=="home"){
+                PlayVideoHeader(responseData)
+            }
            
         }
         catch(err){
@@ -148,7 +156,28 @@ const ContextContainer=({children}:ChildInt )=>{
         }
     }
 
-   
+    const PlayVideoHeader=(responseData:any)=>{
+        if(responseData.length>0){
+            let contador=-1
+            let posicion=0
+            for (const item of responseData){//para que encuentre lo que sea trailer y reproduzca eso, si no encuentra ningun trailer, posicion va a ser 0 y va a reproducir primer video q haya
+                contador++
+                if(item.type=="Trailer"){
+                    posicion=contador
+                }
+            }
+            //responseData[posicion].key, es el codigo de ese video
+           setVideoOk(`https://www.youtube.com/embed/${responseData[posicion].key}?controls=0&amp&autoplay=1&rel=0`)
+          console.log(videoOk,"vidok")
+          //document.querySelector(".videoHeader").click()
+        }
+        else{//poner otro alert mejor
+            alert("No hay videos para mostrar")
+           
+        }
+    }
+
+ 
 
     //--------------------------3-----------------
     //obtener movie review, hacer web q ponga review, en home header se puede poner un boton ir a detalles, va a detail y ahi hay un boton de muestra detalles
@@ -172,7 +201,7 @@ const ContextContainer=({children}:ChildInt )=>{
 
     console.log(review)
 
-    const dataContext={imageOk,GetObject,titleOk,overviewOk,vote,date,genre,backImage,GetVideos,video,idOk,GetGenre,genreNumber,GetReview,review,fullObject}
+    const dataContext={imageOk,GetObject,titleOk,overviewOk,vote,date,genre,backImage,GetVideos,video,idOk,GetGenre,genreNumber,GetReview,review,fullObject,videoOk}
 
     return(
         <div>

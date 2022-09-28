@@ -37,6 +37,7 @@ const Surprise=()=>{
     console.log(movie.original_title, "suprrise")
     return (
         <div className="surprise">
+            <h3>Surprise Movie</h3>
            <Item dataOk={movie} key={movie.id} msg={"surprise"} />
            
         </div>

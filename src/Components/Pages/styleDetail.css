@@ -116,5 +116,9 @@
     .item-detaill img{
         max-height: 900px;
     }
+
+    #overview{
+        width: 600px;
+    }
     
 }

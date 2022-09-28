@@ -4,6 +4,26 @@
   
 
 }
+
+.item-container h4{
+    /*text-align: left;
+    margin-left: 50px;
+    font-size: 26px;*/
+    color: white;
+}
+
+@media screen and (min-width: 1000px) {
+    .item-container h4{
+        text-align: left;
+        margin-left: 50px;
+        font-size: 26px;
+        color: white;
+    }
+
+
+
+}
+
 /*
 .item-container{
     margin-top: 50px;

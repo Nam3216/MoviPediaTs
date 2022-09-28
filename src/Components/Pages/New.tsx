@@ -28,6 +28,7 @@ const NewMovie=()=>{
 
     return(
         <div className="new-movie">
+            <h3>New Releases</h3>
             {list.map((movie)=>{
                 return <Item dataOk={movie} key={movie.id} msg="new"/>
             })}

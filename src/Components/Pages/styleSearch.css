@@ -10,3 +10,9 @@
     font-weight: 600;
     color: white;
 }
+
+#searchinp{
+    color: white;
+    border: 1px solid blue;
+    margin-right: 10px;
+}

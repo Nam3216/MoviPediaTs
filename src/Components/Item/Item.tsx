@@ -80,16 +80,20 @@ const Item=({dataOk,msg}:DataType)=>{
         
     },[])
     //console.log(genre_ids[0],"ids")
-      
-
+      const handleItem=(data:any)=>{
+        GetObject(data)
+        GetVideos(data.id, "home")
+      }
+// <img onClick={()=> GetObject(dataOk)} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="cargando"/>
+//  <p id="p-title">{original_title} </p>
     return(
        <div className="itm" key={id} >
         
            
             {msg=="home"? (
             <div className="item"> 
-                <img onClick={()=> GetObject(dataOk)} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="cargando"/>
-                <p id="p-title">{original_title} </p>
+                <img onClick={()=> handleItem(dataOk)} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="cargando"/>
+              
                 <p>{genreItem}/{genreItem2} </p>
                 <div> Rating: {vote_average}{vote_average<3  && <div><StarIcon/></div>}
                 {vote_average<5 && vote_average >3 && <div><StarIcon fontSize="medium" className="star" /><StarIcon className="star"/></div>}
@@ -102,7 +106,7 @@ const Item=({dataOk,msg}:DataType)=>{
             </div>):(
                 <div className="item"> 
                   <Link to={`/detail/${id}`} > <img  onClick={()=> GetObject(dataOk)} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="cargando"/></Link>
-                    <p id="p-title">{original_title} </p>
+                   {/* <p id="p-title">{original_title} </p>*/}
                     <div>{genreItem}/{genreItem2}</div>
                     <div>Rating: {vote_average} {vote_average<3  && <div><StarIcon/></div>}
                 {vote_average<5 && vote_average >3 && <div><StarIcon fontSize="medium" className="star"/><StarIcon fontSize="medium"className="star" /></div>}

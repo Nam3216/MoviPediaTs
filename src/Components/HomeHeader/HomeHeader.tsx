@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React,{useState,useEffect,useRef} from "react";
 import "./styleHomeHeader.css"
 import { ContextOk } from "../../Context/Context";
 import { useContext } from "react";
@@ -8,16 +8,19 @@ import Item from "../Item/Item";
 import  {ApisOk} from "../Interface/Interface";
 import axios from "axios";
 
+
 const HomeHeader=()=>{
-    const{imageOk,titleOk,overviewOk,GetVideos,idOk,genre,vote,GetReview,GetObject,date,backImage,genreNumber,fullObject}=useContext(ContextOk)
-    
+    const{imageOk,titleOk,overviewOk,GetVideos,idOk,genre,vote,GetReview,GetObject,date,backImage,genreNumber,fullObject,videoOk}=useContext(ContextOk)
+    const inputRef = React.useRef<any>(null)//con el any evita error q dice handleClick que puede dar never
+
     const[list,setList]=useState<ApisOk[]>([])
     const baseUrl:string='https://api.themoviedb.org/3'
     const apiKey:string='42fea80bd124c21e385adf6985bb6c61';
     const url:string=`${baseUrl}/discover/movie?sort_by=popularity.desc&api_key=${apiKey}`
 
         //instalo axios
-
+//si es celular se ve home-header-continaer-text y trae de aca los items, asi en componente item tiene link al detail.
+//si es compu, no se ve ese contenedor, y trae item hom
         const GetApi=async()=>{
             try{
                 const res = await axios.get(url)
@@ -32,12 +35,18 @@ const HomeHeader=()=>{
 
         useEffect(()=>{
             GetApi()
+           
         },[])
 
-    console.log(list,"list")
-    console.log(imageOk, "imhead")
-//si es celular se ve home-header-continaer-text y trae de aca los items, asi en componente item tiene link al detail.
-//si es compu, no se ve ese contenedor, y trae item hom
+   //--------simular click para video youtub
+   const keyboardEvent = () => {
+    
+    if(inputRef.current != null ){//con esto evita errr ts de null que esta el state al princip
+    inputRef.current.handleClick(); //Trigger click
+   }
+
+  }
+//home header 2 y list mob es para cvelular en gde displaynone
     return(
     <div className="home-header-container">
             <div className="home-header2">
@@ -55,19 +64,29 @@ const HomeHeader=()=>{
                })}
         </div>
             
-        <div className="home-header">
-                <div className="home-header-text">
+        <div className="home-header"  >
+        
+            <div className="home-header-text" style={{backgroundImage:`url(${imageOk})` ,
+objectFit:"cover",
+
+/*backgroundSize: "fill",*/
+              
+backgroundPosition:'center',
+
+
+
+backgroundRepeat: 'no-repeat'}}>
                     <h3>{titleOk}</h3>
-                    <p>{genre} </p>
+                 {/*   <p>{genre} </p>
                     <p>Rating: {vote} </p>
-                    <p id="overview">{overviewOk}</p>
+                    <p id="overview">{overviewOk}</p>*/}
                     <div className="header-button">
-                        <Button variant="primary" className="button-header" onClick={()=>GetVideos(idOk)}>Play</Button>
-                        <Link to={`/detail/${idOk}`}> <Button variant="primary" className="button-header" onClick={()=>GetObject(fullObject)}>Ver detalles</Button></Link>
+                        <Button variant="primary" className="button-header" onClick={()=>GetVideos(idOk,"detail")}>Play</Button>
+                        <Link to={`/detail/${idOk}`}> <Button variant="primary" className="button-header" onClick={()=>GetObject(fullObject)}>Details</Button></Link>
                     </div>
-                 </div>
-            <div className="img-header-container">
-                <img src={imageOk}/>
+            </div>
+            <div className="img-header-container" >
+              <div className="videoHeader"   ><iframe ref={inputRef} width="650" height="390" src={videoOk} title="YouTube video player" frameBorder="0"  allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> </div>
                 
            
                
@@ -76,10 +95,10 @@ const HomeHeader=()=>{
     </div>
     )
 }
-
+//`https://image.tmdb.org/t/p/w500/${backImage}`
 export default HomeHeader
-// <img src={imageOk} alt="cargando"/>
-
+// <img src={imageOk} id="img-headr"/>
+//para video cambiar lo del medio solo este cod oQMc7Sq36mI? <iframe width="560" height="315" src="https://www.youtube.com/embed/oQMc7Sq36mI?controls=0&amp;start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 /*<div className="img-header-container" style={{backgroundImage:`url(${imageOk})` ,
 
               

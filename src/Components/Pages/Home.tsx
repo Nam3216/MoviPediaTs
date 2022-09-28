@@ -16,7 +16,7 @@ const Home=()=>{
     const[list,setList]=useState<ApisOk[]>([])//ACA LE DIGO QUE EL USESTATE VA A SER [] Y EL TIPO ES ApisOk[] es un array de con los tipos de apiOK
     //o <ApisOk[]> o Array<ApisOk>
 
-    const{imageOk,GetObject}=useContext(ContextOk) 
+    const{imageOk,GetObject,GetVideos}=useContext(ContextOk) 
    
     
 
@@ -32,6 +32,8 @@ const Home=()=>{
                 const resData= res.data.results as Array<ApisOk> /*ApisOk[]*/ //entro al results y le digo q lo traiga como array de apisOK. podria ser ApisOk[] como arriba. data es del axios
                 setList(resData)
                 GetObject(resData[0])//pongo esto asi apenas arranca pagina ya le pasa una pelicula para q se ponga en el home hed
+                GetVideos(resData[0].id,"home")
+                console.log(resData,"resDats")
             }
             catch(err){
                 console.log(err)
@@ -51,6 +53,7 @@ const Home=()=>{
            <div className="home-container">
                <HomeHeader/>
                <div className="item-container">
+                    <h4>Top Movies</h4>
                {list.map((movie)=>{
                    return <Item dataOk={movie} key={movie.id} msg={"home"} />
                })}

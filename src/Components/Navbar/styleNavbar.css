@@ -2,7 +2,7 @@
     height: 60px;
     background-color: black;
     z-index: 120;
-    border-bottom: 1px solid blue;
+  /*  border-bottom: 1px solid blue;*/
 }
     
  #menuok{
@@ -12,6 +12,7 @@
 
  #menuok p{
     background-color: white;
+ 
  }
 
     a{
@@ -30,7 +31,7 @@
       background-color: black;
         z-index: 110;
         width: 100%;
-        border-bottom: 1px solid blue;
+       /* border-bottom: 1px solid blue;*/
              
         
     }
@@ -69,7 +70,7 @@
          
         
             a{
-                font-weight: 600;
+                font-weight: 400;
                
             }
         
@@ -91,11 +92,11 @@
         
             .navbar-sticky-ok{
                 position: fixed;
-                height: 50px;
+                height: 60px;
                 background-color: black;
                 z-index: 101;
                 width: 100%;
-                border-bottom: 1px solid blue;
+                /*border-bottom: 1px solid blue;*/
                      
                 
             }

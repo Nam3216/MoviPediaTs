@@ -22,20 +22,20 @@ const Detail=()=>{
         <img src={imageOk} alt="cargando" id="image-detail" />
         <div className="item-detail-text">
             <h3>{titleOk}</h3>
-            <p>{overviewOk}</p>
+            <p id="overview">{overviewOk}</p>
             <p>{genre} </p>
             <p>Rating: {vote}</p>
             <p>Fecha de Estreno: {date}</p>
             <div className="button-detail-content">
-            <Button variant="primary" className="button-detail" id="button-play" onClick={()=>GetVideos(idOk)}>Play</Button>
+            <Button variant="primary" className="button-detail" id="button-play" onClick={()=>GetVideos(idOk,"detail")}>Play</Button>
            
           </div>
             <div className="item-detail-text-img"> 
                 <img  src={`https://image.tmdb.org/t/p/w500/${backImage}`} alt="cargando" id="item-detail-text-img"/>
                
             </div>    
-            <Link to={`/review/${idOk}`}> <Button variant="primary" className="button-detail" onClick={()=>GetReview(idOk)}>Leer Reviews. SPOILER</Button></Link>
-          <Button variant="primary" className="button-detail" onClick={()=>window.history.back()}>Volver atras</Button>
+            <Link to={`/review/${idOk}`}> <Button variant="primary" className="button-detail" onClick={()=>GetReview(idOk)}>Movie Reviews. SPOILER</Button></Link>
+          <Button variant="primary" className="button-detail" onClick={()=>window.history.back()}>Go Back</Button>
                       
            
         

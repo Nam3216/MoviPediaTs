@@ -46,8 +46,8 @@ const Search=()=>{
     return(
         <div className="searcher-container">
             <div className="searcher">
-                <input type="text" name="busqueda" placeholder="Inserte su busqueda" onChange={handleInput}/>
-                <Button  onClick={GetApi}>Buscar</Button>
+                <input type="text" name="busqueda" placeholder="Search" onChange={handleInput} id="searchinp"/>
+                <Button  onClick={GetApi}>Search</Button>
             </div>
             
             { checkSearch ?( searchMovie.map((movie)=>{
@@ -56,7 +56,7 @@ const Search=()=>{
 
             }) ):(
                 <div>
-                <p id="search">INGRESA TU BUSQUEDA</p>
+                <p id="search">Search a Movie</p>
               
                 </div>
             )}
