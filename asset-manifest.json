@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MoviPediaTs/static/css/main.4a7bf822.css",
-    "main.js": "/MoviPediaTs/static/js/main.b3049c5e.js",
+    "main.css": "/MoviPediaTs/static/css/main.9b8acc02.css",
+    "main.js": "/MoviPediaTs/static/js/main.4aa9f2ad.js",
     "static/js/787.8937b56f.chunk.js": "/MoviPediaTs/static/js/787.8937b56f.chunk.js",
     "index.html": "/MoviPediaTs/index.html",
-    "main.4a7bf822.css.map": "/MoviPediaTs/static/css/main.4a7bf822.css.map",
-    "main.b3049c5e.js.map": "/MoviPediaTs/static/js/main.b3049c5e.js.map",
+    "main.9b8acc02.css.map": "/MoviPediaTs/static/css/main.9b8acc02.css.map",
+    "main.4aa9f2ad.js.map": "/MoviPediaTs/static/js/main.4aa9f2ad.js.map",
     "787.8937b56f.chunk.js.map": "/MoviPediaTs/static/js/787.8937b56f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a7bf822.css",
-    "static/js/main.b3049c5e.js"
+    "static/css/main.9b8acc02.css",
+    "static/js/main.4aa9f2ad.js"
   ]
 }
