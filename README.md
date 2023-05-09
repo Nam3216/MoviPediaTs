@@ -1,3 +1,5 @@
+Es una aplicacion web en donde puedes ver resumenes, reviews y trailers de peliculas!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
