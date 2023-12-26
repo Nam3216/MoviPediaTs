@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/MoviPediaTs/static/css/main.29d7d8de.css",
-    "main.js": "/MoviPediaTs/static/js/main.e847c974.js",
+    "main.css": "/MoviPediaTs/static/css/main.5a808d6f.css",
+    "main.js": "/MoviPediaTs/static/js/main.d9f79eab.js",
     "static/js/787.8937b56f.chunk.js": "/MoviPediaTs/static/js/787.8937b56f.chunk.js",
+    "static/media/BebasNeue-Regular.ttf": "/MoviPediaTs/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
+    "static/media/netflixlogo.png": "/MoviPediaTs/static/media/netflixlogo.6c9de3edf0e54167bb9e.png",
+    "static/media/revicons.eot": "/MoviPediaTs/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/MoviPediaTs/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/MoviPediaTs/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/MoviPediaTs/index.html",
-    "main.29d7d8de.css.map": "/MoviPediaTs/static/css/main.29d7d8de.css.map",
-    "main.e847c974.js.map": "/MoviPediaTs/static/js/main.e847c974.js.map",
+    "main.5a808d6f.css.map": "/MoviPediaTs/static/css/main.5a808d6f.css.map",
+    "main.d9f79eab.js.map": "/MoviPediaTs/static/js/main.d9f79eab.js.map",
     "787.8937b56f.chunk.js.map": "/MoviPediaTs/static/js/787.8937b56f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29d7d8de.css",
-    "static/js/main.e847c974.js"
+    "static/css/main.5a808d6f.css",
+    "static/js/main.d9f79eab.js"
   ]
 }
